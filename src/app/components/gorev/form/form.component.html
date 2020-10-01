@@ -1,0 +1,25 @@
+<script src="https://kit.fontawesome.com/02809bf484.js" crossorigin="anonymous"></script>
+
+<form #GorevAddForm="ngForm" (ngSubmit)="add(GorevAddForm)" class="form form-register">
+    <div class="form-group">
+        <input type="text" placeholder="Görev Adı" [(ngModel)]="model.name" class="form-control" name="name" id="Gname">
+    </div>
+    <div class="form-group">
+        <input type="text" placeholder="Açıklama" #name="ngModel" [(ngModel)]="model.gaciklama" class="form-control"
+            name="gacik" id="gacik">
+    </div>
+    <div class="from-group">
+        <input class="form-control" #categoryId="ngModel" [(ngModel)]="model.tAdi" name="turId" placeholder="Türü"
+        name="gacik" id="gacik">
+    </div><br>
+    <div class="from-group">
+        <select class="form-control" #categoryId="ngModel" [(ngModel)]="model.status" id="categoryId"
+            name="categoryId" required>
+            <option  disabled required>Yapılıp Yapılmadığını Seçiniz.</option>
+            <option  value="true" required>Yapıldı</option>
+            <option  value="false" required>Yapılmadı</option>
+        </select>
+        
+    </div><br>
+    <button type="submit" class="btn btn-primary">Görev Ekle</button>
+</form>

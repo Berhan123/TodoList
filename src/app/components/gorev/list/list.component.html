@@ -1,0 +1,30 @@
+<div class="custyle">
+    <table class="table table-striped custab">
+        <thead>
+            <tr>
+                <th></th>
+                <th>Görev Adı</th>
+                <th>Görev Açıklama</th>
+                <th>Tür</th>
+            </tr>
+        </thead>
+
+        <tr *ngFor="let model of gor" [class]="model.status ? 'strikethrough': ''">
+            <td><input class="form-check-input" type="checkbox" [(checked)]='model.status'
+                    (click)="updategorev(model.id,model.status,model)" name="exampleRadios" id="exampleRadios1">
+            </td>
+            <td > {{ model.gaciklama }} </td>
+            <td>
+                {{model.name}}
+            </td>
+            <td>
+                <a class="p-2 text-muted" [class]="model.status ? 'disabled': ''" routerLink="/tur/tList/{{model.tAdi}}">{{model.tAdi}}</a>
+
+            </td>
+
+            <td class=" text-center"><a (click)="deletegorev(model.id)" class="btn btn-danger btn-xs"><span
+                        class="glyphicon glyphicon-remove"></span> Sil</a></td>
+        </tr>
+    </table>
+</div>
+

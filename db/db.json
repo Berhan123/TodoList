@@ -1,0 +1,18 @@
+{
+  "gorev": [
+    {
+      "name": "test",
+      "gaciklama": "test",
+      "tAdi": "Kişisel",
+      "id": 1,
+      "status": true
+    },
+    {
+      "name": "test2",
+      "gaciklama": "test2",
+      "tAdi": "Müzik",
+      "id": 2,
+      "status": false
+    }
+  ]
+}
